@@ -20,16 +20,21 @@ sub parse_options {
     );
     local @ARGV = @argv;
     $parser->getoptions(\my %opt, qw/
-        ddl_file=s
+        ddl=s
         datadir=s
         fixtures=s@
     /);
+    for my $opt (qw/ddl datadir/) {
+        die "$opt option is required!" unless exists $opt{$opt};
+    }
 
     if (exists $opt{fixtures}) {
         $opt{fixtures} = [
             map { split /,/, $_ } @{ $opt{fixtures} }
         ];
     }
+    $opt{ddl_file} = delete $opt{ddl};
+
     (\%opt, \@ARGV);
 }
 
