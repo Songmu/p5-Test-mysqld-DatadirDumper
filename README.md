@@ -1,10 +1,10 @@
 # NAME
 
-Test::mysql::CopyDataDumper - Dump mysql data directory for Test::mysqld
+Test::mysql::DatadirDumper - Dump mysql data directory for Test::mysqld
 
 # SYNOPSIS
 
-    use Test::mysql::CopyDataDumper;
+    use Test::mysql::DatadirDumper;
     my $datadir = 'path/to/datadir';
     Test::mysqld::DatadirDumper->new(
         datadir  => $datadir,
@@ -22,7 +22,7 @@ Test::mysql::CopyDataDumper - Dump mysql data directory for Test::mysqld
 
 # DESCRIPTION
 
-Test::mysql::CopyDataDumper is to dump data directory of mysql.
+Test::mysql::DatadirDumper is to dump data directory of mysql.
 The directory is useful for [Test::mysql](http://search.cpan.org/perldoc?Test::mysql)'s `copy_data_from` option.
 
 # CONSTRUCTOR
