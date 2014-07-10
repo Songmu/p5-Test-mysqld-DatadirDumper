@@ -6,7 +6,7 @@ Test::mysql::CopyDataDumper - Dump mysql data directory for Test::mysqld
 
     use Test::mysql::CopyDataDumper;
     my $datadir = 'path/to/datadir';
-    Test::mysqld::CopyDataDumper->new(
+    Test::mysqld::DatadirDumper->new(
         datadir  => $datadir,
         ddl_file => 't/data/ddl.sql',
         fixtures => ['t/data/item.yml'],

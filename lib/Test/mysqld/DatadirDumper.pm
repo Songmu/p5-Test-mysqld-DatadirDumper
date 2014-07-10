@@ -1,4 +1,4 @@
-package Test::mysqld::CopyDataDumper;
+package Test::mysqld::DatadirDumper;
 use 5.008001;
 use strict;
 use warnings;
@@ -63,13 +63,13 @@ __END__
 
 =head1 NAME
 
-Test::mysql::CopyDataDumper - Dump mysql data directory for Test::mysqld
+Test::mysql::DatadirDumper - Dump mysql data directory for Test::mysqld
 
 =head1 SYNOPSIS
 
-    use Test::mysql::CopyDataDumper;
+    use Test::mysql::DatadirDumper;
     my $datadir = 'path/to/datadir';
-    Test::mysqld::CopyDataDumper->new(
+    Test::mysqld::DatadirDumper->new(
         datadir  => $datadir,
         ddl_file => 't/data/ddl.sql',
         fixtures => ['t/data/item.yml'],
@@ -85,7 +85,7 @@ Test::mysql::CopyDataDumper - Dump mysql data directory for Test::mysqld
 
 =head1 DESCRIPTION
 
-Test::mysql::CopyDataDumper is to dump data directory of mysql.
+Test::mysql::DatadirDumper is to dump data directory of mysql.
 The directory is useful for L<Test::mysql>'s C<copy_data_from> option.
 
 =head1 CONSTRUCTOR

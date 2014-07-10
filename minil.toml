@@ -1,4 +1,4 @@
-name = "Test-mysqld-CopyDataDumper"
+name = "Test-mysqld-DatadirDumper"
 # badges = ["travis"]
 authority="cpan:SONGMU"
 

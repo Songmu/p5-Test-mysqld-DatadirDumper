@@ -1,5 +1,5 @@
 #!perl
 use strict;
 use warnings;
-use Test::mysqld::CopyDataDumper::CLI;
-Test::mysqld::CopyDataDumper::CLI->run(@ARGV);
+use Test::mysqld::DatadirDumper::CLI;
+Test::mysqld::DatadirDumper::CLI->run(@ARGV);

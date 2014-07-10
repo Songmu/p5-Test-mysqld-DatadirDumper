@@ -1,15 +1,15 @@
-package Test::mysqld::CopyDataDumper::CLI;
+package Test::mysqld::DatadirDumper::CLI;
 use strict;
 use warnings;
 
 use Getopt::Long;
-use Test::mysqld::CopyDataDumper;
+use Test::mysqld::DatadirDumper;
 
 sub run {
     my ($class, @argv) = @_;
 
     my ($opt,) = $class->parse_options(@argv);
-    Test::mysqld::CopyDataDumper->new($opt)->dump;
+    Test::mysqld::DatadirDumper->new($opt)->dump;
 }
 
 sub parse_options {
